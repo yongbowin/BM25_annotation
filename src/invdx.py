@@ -77,5 +77,5 @@ def build_data_structures(corpus):
 
 		# build document length table
 		length = len(corpus[str(docid)])
-		dlt.add(docid, length)
+		dlt.add(docid, length)  # {"id": length, ...}
 	return idx, dlt
