@@ -14,7 +14,7 @@ def main():
 	results = proc.run()
 	qid = 0
 	for result in results:
-		sorted_x = sorted(result.iteritems(), key=operator.itemgetter(1))
+		sorted_x = sorted(result.items(), key=operator.itemgetter(1))
 		sorted_x.reverse()
 		index = 0
 		for i in sorted_x[:100]:
