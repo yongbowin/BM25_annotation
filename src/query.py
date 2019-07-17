@@ -1,5 +1,3 @@
-__author__ = 'Nick Hirakawa'
-
 from invdx import build_data_structures
 from rank import score_BM25
 import operator

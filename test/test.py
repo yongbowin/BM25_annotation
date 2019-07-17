@@ -1,5 +1,3 @@
-__author__ = 'Nick Hirakawa'
-
 import unittest
 
 from src.invdx import *
@@ -28,7 +26,6 @@ class ParseTester(unittest.TestCase):
 		qp.parse()
 		queries = qp.get_queries()
 		self.assertEqual(queries[0], ['portabl', 'oper', 'system'])
-
 
 
 class RankTest(unittest.TestCase):

@@ -1,6 +1,5 @@
 #invdx.py
 # An inverted index
-__author__ = 'Nick Hirakawa'
 
 
 class InvertedIndex:
@@ -25,7 +24,7 @@ class InvertedIndex:
 			d[docid] = 1
 			self.index[word] = d
 
-	#frequency of word in document
+	# frequency of word in document
 	def get_document_frequency(self, word, docid):
 		if word in self.index:
 			if docid in self.index[word]:
@@ -35,7 +34,7 @@ class InvertedIndex:
 		else:
 			raise LookupError('%s not in index' % str(word))
 
-	#frequency of word in index, i.e. number of documents that contain word
+	# frequency of word in index, i.e. number of documents that contain word
 	def get_index_frequency(self, word):
 		if word in self.index:
 			return len(self.index[word])
@@ -72,11 +71,11 @@ def build_data_structures(corpus):
 	dlt = DocumentLengthTable()
 	for docid in corpus:
 
-		#build inverted index
+		# build inverted index
 		for word in corpus[docid]:
 			idx.add(str(word), str(docid))
 
-		#build document length table
+		# build document length table
 		length = len(corpus[str(docid)])
 		dlt.add(docid, length)
 	return idx, dlt
