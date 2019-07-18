@@ -174,7 +174,7 @@ def passage_ranking(idx_tok_dict):
 
 if __name__ == '__main__':
     """  
-    export BASE_PATH = "/DATA2/disk1/wangyongbo/ms_marco/data"
+    export BASE_PATH=/DATA2/disk1/wangyongbo/ms_marco/data
     
     python passage_ranking.py --input_file $BASE_PATH/lines_train_v2.1.json --output_file $BASE_PATH/lines_train_v2.1_ranked.json
     """
