@@ -143,6 +143,7 @@ def passage_ranking(idx_tok_dict):
                 for each document and its (the current query word's) word frequency,
                 """
                 for docid, freq in doc_dict.items():
+                    docid = str(docid)
                     score = score_BM25(
                         n=len(doc_dict),
                         f=freq,
